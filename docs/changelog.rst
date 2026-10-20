@@ -13,6 +13,7 @@ This minor version includes:
     - Backwards compatibility:
         - Every ``_``-prefixed spelling is still importable from the module that defines it, and is the same object as its public counterpart, so ``isinstance`` checks and existing imports of it are unaffected
         - A private spelling that was only ever reachable through a module that happened to import it — the executor modules, and a few of the ``config_*`` modules — is no longer reachable there. Import configuration types from ``weaviate.classes.config``, or from ``weaviate.collections.classes.config``
+    - Deprecate ``client.graphql_raw_query()``, which will be removed in a release after May 1, 2027, when Weaviate retires the GraphQL API. Use the collection query methods or the REST Search API instead
 
 Version 4.23.1
 --------------
